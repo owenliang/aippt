@@ -34,11 +34,11 @@ def generate_ppt_content(topic,pages):
                 "content": [
                     {
                         "title": "title for paragraph 1",
-                        "desctription": "detail for paragraph 1",
+                        "description": "detail for paragraph 1",
                     },
                     {
                         "title": "title for paragraph 2",
-                        "desctription": "detail for paragraph 2",
+                        "description": "detail for paragraph 2",
                     },
                 ],
             },
@@ -47,15 +47,15 @@ def generate_ppt_content(topic,pages):
                 "content": [
                     {
                         "title": "title for paragraph 1",
-                        "desctription": "detail for paragraph 1",
+                        "description": "detail for paragraph 1",
                     },
                     {
                         "title": "title for paragraph 2",
-                        "desctription": "detail for paragraph 2",
+                        "description": "detail for paragraph 2",
                     },
                     {
                         "title": "title for paragraph 3",
-                        "desctription": "detail for paragraph 3",
+                        "description": "detail for paragraph 3",
                     },
                 ],
             },
@@ -90,6 +90,7 @@ def generate_ppt_file(topic,ppt_content):
         slide.placeholders[0].text=page['title']
         # 正文
         for sub_content in page['content']:
+            print(sub_content)
             # 一级正文
             sub_title=slide.placeholders[1].text_frame.add_paragraph()
             sub_title.text,sub_title.level=sub_content['title'],1
